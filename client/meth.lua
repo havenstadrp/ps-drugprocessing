@@ -20,7 +20,7 @@ AddEventHandler('ps-drugprocessing:ProcessChemicals', function()
 				if result and hasitem1 then
 					hasitem2 = true
 				else
-					QBCore.Functions.Notify(Lang:t("error.hydrochloric_acid"), 'error')
+					QBCore.Functions.Notify(Lang:t("error.no_hydrochloric_acid"), 'error')
 				end
 			end, 'hydrochloric_acid', Config.MethProcessing.HydAcid)
 			Citizen.Wait(1000) -- BUFFER  
@@ -30,7 +30,7 @@ AddEventHandler('ps-drugprocessing:ProcessChemicals', function()
 					hasitem1 = false
 					hasitem2 = false
 				else
-					QBCore.Functions.Notify(Lang:t("error.sodium_hydroxide"), 'error')
+					QBCore.Functions.Notify(Lang:t("error.no_sodium_hydroxide"), 'error')
 				end
 			end, 'sodium_hydroxide', Config.MethProcessing.SodHyd)
 		else
