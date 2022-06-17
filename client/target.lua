@@ -320,7 +320,7 @@ CreateThread(function()
             {
                 type = "client",
                 event = "ps-drugprocessing:pickWeed",
-                icon = "fas fa-envira",
+                icon = "fas fa-cannabis",
                 label = Lang:t("target.pickWeed"),
             },
         },
