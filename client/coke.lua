@@ -222,7 +222,7 @@ RegisterNetEvent('ps-drugprocessing:ProcessCocaFarm', function()
 				if result then
 					ProcessCoke()
 				else
-					QBCore.Functions.Notify(Lang:t("error.no_process_coca"), 'error')
+					QBCore.Functions.Notify(Lang:t("error.no_coca_leaf"), 'error')
 				end
 			end, {coca_leaf = Config.CokeProcessing.CokeLeaf, trimming_scissors = 1})
 		end
@@ -357,7 +357,7 @@ RegisterCommand('propfix', function()
 end)
 
 CreateThread(function()
-	local cokeZone = CircleZone:Create(Config.CircleZones.CokeField.coords, 50.0, {
+	local cokeZone = CircleZone:Create(Config.CircleZones.CokeField.coords, 10.0, {
 		name = "ps-cokezone",
 		debugPoly = false
 	})
